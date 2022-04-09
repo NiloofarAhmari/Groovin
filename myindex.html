@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/bootstrap-rtl.min.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/venobox.min.css">
+  <link rel="stylesheet" href="assets/css/mystyle.css">
+  <title>Document</title>
+  <style>
+    /*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+    .portfolio .portfolio-item {
+      margin-bottom: 30px;
+    }
+
+    .portfolio #portfolio-flters {
+      padding: 0;
+      margin: 0 auto 20px auto;
+      list-style: none;
+      text-align: center;
+    }
+
+    .portfolio #portfolio-flters li {
+      cursor: pointer;
+      display: inline-block;
+      padding: 8px 15px 10px 15px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #444444;
+      margin-bottom: 5px;
+      transition: all 0.3s ease-in-out;
+      border-radius: 3px;
+    }
+
+    .portfolio #portfolio-flters li:hover,
+    .portfolio #portfolio-flters li.filter-active {
+      color: #fff;
+      background: #5c9f24;
+    }
+
+    .portfolio #portfolio-flters li:last-child {
+      margin-right: 0;
+    }
+
+    .portfolio .portfolio-wrap {
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      background: rgba(42, 42, 42, 0.7);
+    }
+
+    .portfolio .portfolio-wrap::before {
+      content: "";
+      background: rgba(42, 42, 42, 0.7);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      transition: all ease-in-out 0.3s;
+      z-index: 2;
+      opacity: 0;
+    }
+
+    .portfolio .portfolio-wrap img {
+      transition: all ease-in-out 0.3s;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-info {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      transition: all ease-in-out 0.3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-info h4 {
+      font-size: 20px;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-info p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      text-transform: uppercase;
+      padding: 0;
+      margin: 0;
+      font-style: italic;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-links {
+      text-align: center;
+      z-index: 4;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-links a {
+      color: #fff;
+      margin: 0 5px 0 0;
+      font-size: 28px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .portfolio .portfolio-wrap .portfolio-links a:hover {
+      color: #8ed851;
+    }
+
+    .portfolio .portfolio-wrap:hover::before {
+      opacity: 1;
+    }
+
+    .portfolio .portfolio-wrap:hover img {
+      transform: scale(1.2);
+    }
+
+    .portfolio .portfolio-wrap:hover .portfolio-info {
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ======= Portfolio Section ======= -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Portfolio</h2>
+        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
+          in iste officiis commodi quidem hic quas.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <ul id="portfolio-flters">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">App</li>
+            <li data-filter=".filter-card">Card</li>
+            <li data-filter=".filter-web">Web</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row portfolio-container">
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>App</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox"
+                  title="App 1"><i class="fas fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fas fa-share"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox"
+                  title="Web 3"><i class="fas fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fas fa-share"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>App</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox"
+                  title="App 2"><i class="fas fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fas fa-share"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 2</h4>
+              <p>Card</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox"
+                  title="Card 2"><i class="fas fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fas fa-share"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 2</h4>
+              <p>Web</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox"
+                  title="Web 2"><i class="fas fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fas fa-share"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>App</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox"
+                  title="App 3"><i class="fas fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fas fa-share"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 1</h4>
+              <p>Card</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox"
+                  title="Card 1"><i class="fas fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fas fa-share"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Card 3</h4>
+              <p>Card</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox"
+                  title="Card 3"><i class="fas fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fas fa-share"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <h4>Web 3</h4>
+              <p>Web</p>
+              <div class="portfolio-links">
+                <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox"
+                  title="Web 3"><i class="fas fa-plus"></i></a>
+                <a href="portfolio-details.html" title="More Details"><i class="fas fa-share"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Portfolio Section -->
+
+
+
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/venobox.min.js"></script>
+  <script src="assets/js/all.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/mymain.js"></script>
+  <script>
+    // Porfolio isotope and filter
+    $(window).on('load', function () {
+      var portfolioIsotope = $('.portfolio-container').isotope({
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows'
+      });
+
+      $('#portfolio-flters li').on('click', function () {
+        $("#portfolio-flters li").removeClass('filter-active');
+        $(this).addClass('filter-active');
+
+        portfolioIsotope.isotope({
+          filter: $(this).data('filter')
+        });
+      });
+
+      // Initiate venobox (lightbox feature used in portofilo)
+      $(document).ready(function () {
+        $('.venobox').venobox();
+      });
+    });
+    // Portfolio details carousel
+    $(".portfolio-details-carousel").owlCarousel({
+      autoplay: true,
+      dots: true,
+      loop: true,
+      items: 1
+    });
+  </script>
+</body>
+
+</html>
